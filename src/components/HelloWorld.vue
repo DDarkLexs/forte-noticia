@@ -5,8 +5,11 @@
           
         </v-img>
         <v-card-title>
-        
+          {{ artigo.title }}
         </v-card-title>
+        <v-card-text>
+          {{ artigo.content }}
+        </v-card-text>
       </vcard>
       
   </v-app>

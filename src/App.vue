@@ -1,8 +1,8 @@
 <template>
 <v-app>
-  <v-navigation-drawer app>
-    <!-- -->
-  </v-navigation-drawer>
+<!--   <v-navigation-drawer app>
+  
+  </v-navigation-drawer> -->
 
   <v-app-bar color="primary" app>
     <!-- -->
@@ -53,6 +53,15 @@
       <v-icon>mdi-image</v-icon>
     </v-btn>
   </v-bottom-navigation>
+  <v-card
+      class="flex"
+      flat
+      tile
+    >
+    <v-card-text class="py-2 white--text text-center">
+      {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+    </v-card-text>
+  </v-card>
   </v-footer>
 </v-app>
 </template>
