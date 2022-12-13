@@ -1,6 +1,36 @@
 <template>
   <div>
     <v-row g-1>
+      {{ artigo5 }}
+      
+      <v-col cols="12" sm="12">
+        <v-carousel
+    cycle
+    height="250"
+    hide-delimiter-background
+    show-arrows-on-hover
+  >
+    <v-carousel-item
+      v-for="(artigo, i) in artigo5"
+      :key="i"
+    >
+      <v-sheet
+        color="primary"
+        height="100%"
+      >
+        <v-row
+          class="fill-height"
+          align="center"
+          justify="center"
+        >
+          <div class="text-h2">
+            {{ artigo }} Slide
+          </div>
+        </v-row>
+      </v-sheet>
+    </v-carousel-item>
+  </v-carousel>
+      </v-col>
       <v-col 
       v-for="({ 
         urlToImage,
@@ -44,7 +74,8 @@
     name: 'Home',
     computed:{
       ...mapGetters({
-        artigos:'PN/artigoAPI'
+        artigos:'PN/artigoAPI',
+        artigo5:'PN/artigoAPI_5',
       })
     },
     methods: {

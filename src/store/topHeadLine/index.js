@@ -273,6 +273,13 @@ export default {
         },
         artigoAPI:({ artigos }) => {
             return artigos
+        },
+        artigoAPI_5:({ artigos }) => {
+            const artigo = []
+            for(var i; i<= 5; i++){
+                artigo.push(artigos[i])
+            }
+            return artigo
         }
     },
     mutations:{
